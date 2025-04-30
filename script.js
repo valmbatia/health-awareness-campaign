@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
 
           //Show a generic reply
-        replyBox.textContent = `Thanks ${name}, we received your question: "${message}". We'll get back to you soon!`;
-        replyBox.style.color = "green";
+        feedbackMessage.textContent = `Thanks ${name}, we received your question: "${message}". We'll get back to you soon!`;
+        feedbackMessage.style.color = "green";
           
         feedbackForm.reset();
       });
