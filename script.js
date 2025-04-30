@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const feedbacks = JSON.parse(localStorage.getItem('feedbacks') || '[]');
         feedbacks.push({ name, email, message, date: new Date().toISOString() });
         localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
+
+          //Show a generic reply
+        replyBox.textContent = `Thanks ${name}, we received your question: "${message}". We'll get back to you soon!`;
+        replyBox.style.color = "green";
+  
   
         feedbackMessage.textContent = 'Thank you for your feedback!';
         feedbackMessage.style.color = '';
