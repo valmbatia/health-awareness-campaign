@@ -34,10 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
           //Show a generic reply
         replyBox.textContent = `Thanks ${name}, we received your question: "${message}". We'll get back to you soon!`;
         replyBox.style.color = "green";
-  
-  
-        feedbackMessage.textContent = 'Thank you for your feedback!';
-        feedbackMessage.style.color = '';
+          
         feedbackForm.reset();
       });
     }
