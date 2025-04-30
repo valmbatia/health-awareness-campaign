@@ -1,0 +1,173 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #ff6f61;    /* Coral */
+  --secondary-color: #6b5b95;  /* Purple */
+  --accent1-color: #88b04b;    /* Green */
+  --accent2-color: #f7cac9;    /* Pink */
+  --accent3-color: #92a8d1;    /* Light Blue */
+  --background-gradient: linear-gradient(135deg, var(--accent2-color), var(--accent3-color));
+  --text-color: #333333;
+  --font-family: 'Poppins', Arial, sans-serif;
+  --base-font-size: 16px;
+  --spacing: 1rem;
+  --radius: 0.75rem;
+  --transition-speed: 0.3s;
+  --max-width: 900px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+  background: #9c3838;
+  line-height: 1.6;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}
+
+/* Header */
+header {
+  background: var(--background-gradient);
+  color: #fff;
+  padding: var(--spacing) 0;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 1.8rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing);
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background var(--transition-speed);
+}
+nav a:hover,
+nav a.active {
+  background: var(--primary-color);
+}
+
+/* Main Sections */
+main {
+  padding: calc(var(--spacing) * 2) 0;
+}
+section {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: calc(var(--spacing) * 1.5);
+  margin-bottom: calc(var(--spacing) * 2);
+  border-top: 8px solid var(--primary-color);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing);
+  color: var(--primary-color);
+}
+
+/* Buttons */
+button {
+  background: var(--accent1-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background var(--transition-speed);
+}
+button:hover {
+  background: var(--primary-color);
+}
+
+/* Forms */nform {
+  display: grid;
+  gap: var(--spacing);
+}
+label {
+  font-weight: 600;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--accent3-color);
+  border-radius: var(--radius);
+  transition: border var(--transition-speed);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Lists (Checklist & Contacts) */
+ul {
+  list-style: none;
+}
+#health-checklist li,
+#doctor-contacts li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--accent2-color);
+}
+#health-checklist li:last-child,
+#doctor-contacts li:last-child {
+  border-bottom: none;
+}
+
+/* Feedback Message */
+#feedback-message {
+  margin-top: var(--spacing);
+  font-weight: 600;
+  color: var(--accent1-color);
+}
+
+/* Footer */
+footer {
+  background: var(--accent3-color);
+  color: #fff;
+  text-align: center;
+  padding: var(--spacing);
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    gap: var(--spacing);
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
